@@ -1,0 +1,24 @@
+ {% extends "layout.html" %}
+
+{% block title %}
+    Trading
+{% endblock %}
+
+{% block main %}
+     <table class="table">
+            <tr>
+                <th>Stock Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transacted</th>
+            </tr>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock.symbol }}</td>
+                    <td>{{ stock.shares }}</td>
+                    <td>${{ stock.price }}</td>
+                    <td>{{ stock.transacted }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+{% endblock %}

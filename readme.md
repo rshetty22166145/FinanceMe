@@ -9,4 +9,6 @@
 ## Setup Info
 ### 1- Go to Demo link and click register on the top right.
 ### 2- Create the account and then you can now freely trade stocks.
+### 3- Use Buy and sell Tabs to navigate to those pages.
+### 4- Example of a symbol is AAPL for apple.
 

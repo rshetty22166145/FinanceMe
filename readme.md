@@ -1,6 +1,6 @@
 # FinanceMe
 ## Demo Link: https://financemee.herokuapp.com/
-## Note: Quote and History both will have server errors beacuse of compatibility issues with heroku
+## Note: Quote and History both will have server errors beacuse of compatibility issues with heroku. Buy, sell and portfolio are fully-functional.
 ## Technologies Used:
 ### HTML,CSS.JS,REACT,FLASK,SQL
 ## Description

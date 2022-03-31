@@ -250,19 +250,17 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    #id = session["user_id"]
+    id = session["user_id"]
 
     # select from db to show on page
-    #history = db.execute("SELECT * FROM history WHERE id = :id", id=id)
+    history = db.execute("SELECT * FROM history WHERE id = :id", id=id)
 
     # change any floats to USD
-    #for i in range(len(history)):
-    #    history[i]["price"] = usd(history[i]["price"])
+    for i in range(len(history)):
+        history[i]["price"] = usd(history[i]["price"])
 
     # return to history page with all history
-    #return render_template("history.html", history=history)
-    transact = db.execute("SELECT * FROM transactions WHERE id=:id", id=session["user_id"])
-    return render_template("history.html", stocks=transact)
+    return render_template("history.html", history=history)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -317,26 +315,23 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    # User reached route via POST (as by submitting a form via POST)
+
     if request.method == "POST":
+
+        # Ensure symbol was submitted
         if not request.form.get("symbol"):
-            return apology("must provide symbol", 400)
+            return apology("must provide a valid stock symbol", 404)
 
+        stocks = lookup(request.form.get("symbol"))
 
-        quote=request.form.get("symbol").upper()
+        if not stocks:
+            return apology("must provide a valid stock symbol", 404)
 
-        # check is valid stock name provided
-        if lookup(quote)== None:
-            return apology("Stock symbol not valid, please try again",400)
+        # Show current price of stock requested
+        return render_template("quoted.html", name=stocks["name"], symbol=stocks["symbol"], price=stocks["price"])
 
-        # stock name is valid
-        else:
-            stock=lookup(quote)
-            return render_template("quoted.html", stockName={
-                'name':stock['name'],
-                'symbol':stock['symbol'],
-                'price':usd(stock['price'])
-            })
+    else:
+        return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])

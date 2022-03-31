@@ -1,5 +1,6 @@
 # FinanceMe
 ## Demo Link: https://financemee.herokuapp.com/
+##Note: Quote and History both will have server errors beacuse of compatibility issues with heroku
 ## Technologies Used:
 ### HTML,CSS.JS,REACT,FLASK,SQL
 ## Description
@@ -8,3 +9,4 @@
 ## Setup Info
 ### 1- Go to Demo link and click register on the top right.
 ### 2- Create the account and then you can now freely trade stocks.
+

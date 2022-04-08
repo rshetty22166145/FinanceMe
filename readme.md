@@ -1,6 +1,7 @@
 # FinanceMe
 ## Demo Link: https://financemee.herokuapp.com/
 ## Note: Quote and History both will have server errors beacuse of compatibility issues with heroku. Buy, sell and portfolio are fully-functional.
+<img width="1440" alt="Screen Shot 2022-04-07 at 10 14 42 PM" src="https://user-images.githubusercontent.com/62463648/162350064-466b0111-e168-43cc-a516-7f48628790ef.png">
 ## Technologies Used:
 ### HTML,CSS.JS,REACT,FLASK,SQL
 ## Description

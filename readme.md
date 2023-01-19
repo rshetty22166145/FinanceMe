@@ -1,5 +1,5 @@
 # FinanceMe
-## Note: Heroku has made dynos and addons paid from Nov 28th 2022, so the deplyment no longer works. Kindly clone the Repo in CS50 IDE to run now
+## Note: Heroku has made dynos and addons paid from Nov 28th 2022, so the deployment no longer works. Kindly clone the Repo in CS50 IDE to run now
 ## Demo Link: https://financemee.herokuapp.com/
 
 <img width="1440" alt="Screen Shot 2022-04-07 at 10 14 42 PM" src="https://user-images.githubusercontent.com/62463648/162350064-466b0111-e168-43cc-a516-7f48628790ef.png">
